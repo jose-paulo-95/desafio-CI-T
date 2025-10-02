@@ -1,6 +1,6 @@
 import "./pages/Pages";
 import "./services/ApiServices";
-import "./test-utils";
+
 
 
 
@@ -66,9 +66,7 @@ Cypress.Commands.add("cleanupTestData", () => {
 });
 
 
-Cypress.Commands.add("waitForElement", (selector, timeout = 10000) => {
-  cy.get(selector, { timeout }).should("be.visible");
-});
+
 
 
 Cypress.Commands.add("fillFormField", (selector, value) => {

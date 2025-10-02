@@ -77,12 +77,21 @@ describe("Frontend - Cenário 3: Gerenciamento de Produtos", () => {
     );
 
 
-    productApiService.findProductByName(productData.nome).then((product) => {
-      expect(product).to.exist;
-      expect(product.nome).to.eq(productData.nome);
-      expect(product.preco).to.eq(productData.preco);
-      createdProductId = product._id;
+    productApiService.findProductByName(productData.nome).then((response) => {
+      expect(response.status).to.eq(200);
+      expect(response.body).to.exist;
+      expect(response.body.produtos).to.be.an("array").and.not.empty;
+      const produtoEncontrado = response.body.produtos.find(
+        (produto) => produto.nome === productData.nome
+      );
+      expect(produtoEncontrado.nome).to.eq(productData.nome);
+      expect(produtoEncontrado.preco).to.eq(productData.preco);
+      expect(produtoEncontrado.descricao).to.eq(productData.descricao);
+      expect(produtoEncontrado.quantidade).to.eq(productData.quantidade);
+      
+      createdProductId = produtoEncontrado._id;
     });
+  
   });
 
   it("Deve exibir erro ao tentar cadastrar produto com dados inválidos", () => {

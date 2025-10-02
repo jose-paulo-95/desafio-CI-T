@@ -120,7 +120,13 @@ class ProductApiService {
       failOnStatusCode: false,
     });
   }
-
+  findProductByName(productName) {
+    return cy.api({
+      method: "GET",
+      url: `${this.baseUrl}${this.endpoints.products}?nome=${productName}`,
+      failOnStatusCode: false,
+    });
+  }
   updateProduct(productId, productData, token) {
     return cy.api({
       method: "PUT",
