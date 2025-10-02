@@ -1,0 +1,9 @@
+# Ignorar dependências e arquivos de build
+node_modules/
+.env
+.env.*
+cypress/videos/
+cypress/screenshots/
+cypress/reports/
+
+

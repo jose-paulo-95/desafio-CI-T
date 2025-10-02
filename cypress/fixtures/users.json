@@ -1,0 +1,26 @@
+{
+  "validUser": {
+    "nome": "Usuário Teste",
+    "email": "usuario.teste@email.com",
+    "password": "123456",
+    "administrador": "true"
+  },
+  "invalidUser": {
+    "nome": "",
+    "email": "email-invalido",
+    "password": "123",
+    "administrador": "true"
+  },
+  "newUser": {
+    "nome": "Novo Usuário",
+    "email": "novo.usuario@email.com",
+    "password": "123456",
+    "administrador": "false"
+  },
+  "adminUser": {
+    "nome": "Admin Teste",
+    "email": "admin@email.com",
+    "password": "123456",
+    "administrador": "true"
+  }
+}

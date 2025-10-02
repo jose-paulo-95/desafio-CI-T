@@ -1,0 +1,15 @@
+{
+  "name": "kiosk_automation_e2e",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:open": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress-plugin-api": "^2.11.2"
+  }
+}
